@@ -72,7 +72,7 @@ const UserListScreen = ({ history }) => {
                            )}
                         </td>
                         <td>
-                           <LinkContainer to={`/user/${user._id}/edit`}>
+                           <LinkContainer to={`user/${user._id}/edit`}>
                               <Button className='btn-sm' variant='light'>
                                  <i className='fas fa-edit'></i>
                               </Button>
