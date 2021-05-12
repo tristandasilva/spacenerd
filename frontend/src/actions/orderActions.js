@@ -9,6 +9,9 @@ import {
    ORDER_PAY_REQUEST,
    ORDER_PAY_SUCCESS,
    ORDER_PAY_FAIL,
+   ORDER_LIST_USER_REQUEST,
+   ORDER_LIST_USER_SUCCESS,
+   ORDER_LIST_USER_FAIL,
 } from '../constants/orderConstants'
 
 export const createOrder = order => async (dispatch, getState) => {
@@ -78,13 +81,49 @@ export const getOrderDetails = id => async (dispatch, getState) => {
    }
 }
 
-export const payOrder = (orderId, paymentResult) => async (
-   dispatch,
-   getState
-) => {
+export const payOrder =
+   (orderId, paymentResult) => async (dispatch, getState) => {
+      try {
+         dispatch({
+            type: ORDER_PAY_REQUEST,
+         })
+
+         const {
+            userLogin: { userInfo },
+         } = getState()
+
+         const config = {
+            headers: {
+               'Content-Type': 'application/json',
+               Authorization: `Bearer ${userInfo.token}`,
+            },
+         }
+
+         const { data } = await axios.put(
+            `/api/orders/${orderId}/pay`,
+            paymentResult,
+            config
+         )
+
+         dispatch({
+            type: ORDER_PAY_SUCCESS,
+            payload: data,
+         })
+      } catch (err) {
+         dispatch({
+            type: ORDER_PAY_FAIL,
+            payload:
+               err.response && err.response.data.message
+                  ? err.response.data.message
+                  : err.message,
+         })
+      }
+   }
+
+export const listUserOrders = () => async (dispatch, getState) => {
    try {
       dispatch({
-         type: ORDER_PAY_REQUEST,
+         type: ORDER_LIST_USER_REQUEST,
       })
 
       const {
@@ -93,24 +132,19 @@ export const payOrder = (orderId, paymentResult) => async (
 
       const config = {
          headers: {
-            'Content-Type': 'application/json',
             Authorization: `Bearer ${userInfo.token}`,
          },
       }
 
-      const { data } = await axios.put(
-         `/api/orders/${orderId}/pay`,
-         paymentResult,
-         config
-      )
+      const { data } = await axios.get('/api/orders/myorders', config)
 
       dispatch({
-         type: ORDER_PAY_SUCCESS,
+         type: ORDER_LIST_USER_SUCCESS,
          payload: data,
       })
    } catch (err) {
       dispatch({
-         type: ORDER_PAY_FAIL,
+         type: ORDER_LIST_USER_FAIL,
          payload:
             err.response && err.response.data.message
                ? err.response.data.message
