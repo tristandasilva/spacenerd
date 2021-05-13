@@ -19,17 +19,25 @@ const Header = () => {
    }
    return (
       <header>
-         <Navbar bg='light' expand='lg' collapseOnSelect>
+         <Navbar variant='light' expand='lg' collapseOnSelect>
             <Container>
                <LinkContainer to='/'>
-                  <Navbar.Brand>SPACENERD</Navbar.Brand>
+                  <Navbar.Brand>
+                     <img
+                        className='mr-3'
+                        src='../imgs/saturn.png'
+                        width='25px'
+                        height='25px'
+                     ></img>
+                     SPACENERD
+                  </Navbar.Brand>
                </LinkContainer>
 
                <Navbar.Toggle aria-controls='basic-navbar-nav' />
                <Navbar.Collapse id='basic-navbar-nav'>
                   <Nav className='ml-auto'>
                      <LinkContainer to='/cart'>
-                        <Nav.Link>
+                        <Nav.Link className='header-links'>
                            <i className='fas fa-shopping-cart mr-2'></i>Cart
                         </Nav.Link>
                      </LinkContainer>

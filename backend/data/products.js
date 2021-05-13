@@ -1,7 +1,7 @@
 const products = [
    {
       name: 'Optimal Mobility Kiven Bar Cart',
-      image: '/imgs/kiven-bar-cart.jpeg',
+      image: '/images/kiven-bar-cart.jpeg',
       description:
          'A bar cart with smooth wheels for optimal mobility with attached handles and spacious shelving. Looks stylish in your living room or kitchen as a serving tray or as a decor stand. An optimal mobility piece of furniture that will show to wow your guests for any occasion. ',
       brand: 'Wayfair',
@@ -13,7 +13,7 @@ const products = [
    },
    {
       name: 'Haak Chevron Beveled Bathroom / Vanity Mirror',
-      image: '/imgs/chevron-mirror.jpeg',
+      image: '/images/chevron-mirror.jpeg',
       description:
          'Brighten up your bathroom with this vanity mirror. Made from foam-injected polystyrene, the wide frame features a herringbone chevron tile motif in a marbled foil finish for added depth',
       brand: 'Wayfair',
@@ -25,7 +25,7 @@ const products = [
    },
    {
       name: 'Eclectic Glass and Globe Sculpture',
-      image: '/imgs/glass-globe.jpeg',
+      image: '/images/glass-globe.jpeg',
       description:
          'Experience the world in your grasp with our decorative globe with stand! Place this globe on any accent table to show your love for travelling.',
       brand: 'Wayfair',
@@ -37,7 +37,7 @@ const products = [
    },
    {
       name: 'Geometric Gold Starburst Sculpture Set',
-      image: '/imgs/gold-sculpture.jpeg',
+      image: '/images/gold-sculpture.jpeg',
       description:
          "Decorate your coffee table or bookcase with this decorative sculpture set. They're made from metal and have an orb body with open, triangular arms sticking out in every direction to create a starburst silhouette.",
       brand: 'Wayfair',
@@ -49,7 +49,7 @@ const products = [
    },
    {
       name: 'Faux Palm Tree Plant in Pot',
-      image: '/imgs/faux-palm-tree.jpeg',
+      image: '/images/faux-palm-tree.jpeg',
       description:
          'The Wildon Home ® is known for harmonizing tranquil colours and classic shapes allowing you to bring the calm feel of zen to your home or office décor. This Twisted Palm tree allows you to feel like your surrounded by nature.',
       brand: 'Wayfair',
@@ -61,7 +61,7 @@ const products = [
    },
    {
       name: 'KD008 - Set of 6 Throw Pillows',
-      image: '/imgs/KD008-throw-pillows.jpeg',
+      image: '/images/KD008-throw-pillows.jpeg',
       description:
          'The throw pillow covers in different patterns can make your home more coloful. The durable canvas fabric is perfect for indoor use and also suitable for outdoor use.',
       brand: 'Wayfair',
@@ -73,7 +73,7 @@ const products = [
    },
    {
       name: 'Hesser 62" Arched Floor Lamp',
-      image: '/imgs/arched-floor-lamp.jpeg',
+      image: '/images/arched-floor-lamp.jpeg',
       description:
          'This floor lamp is an update on mid-century modern design, with an appealing blend of curves and angles. Finished in either a warm brass or classic blackened bronze.',
       brand: 'Wayfair',
@@ -85,7 +85,7 @@ const products = [
    },
    {
       name: '5 Piece Accent Wall Shelf',
-      image: '/imgs/accent-shelf.jpeg',
+      image: '/images/accent-shelf.jpeg',
       description:
          'This wall shelf gives you both organization and style, without taking up square footage. We call that a decorating one-and-done',
       brand: 'Wayfair',
@@ -97,7 +97,7 @@ const products = [
    },
    {
       name: 'Rieth 6 Bottle Tabletop Wine Bottle Rack',
-      image: '/imgs/table-wine-rack.jpeg',
+      image: '/images/table-wine-rack.jpeg',
       description:
          'Store your favourite wines in style with the help of this rack, a must-have addition to any kitchen or dining area. Founded atop a stone base, this piece is crafted from iron and awash in a bright gold finish.',
       brand: 'Wayfair',
@@ -109,7 +109,7 @@ const products = [
    },
    {
       name: 'Dark Colour Explosion Oil Painting',
-      image: '/imgs/dark-colour-painting.jpeg',
+      image: '/images/dark-colour-painting.jpeg',
       description:
          'This ready to hang, gallery-wrapped art piece features a colourful scene filled with flowers',
       brand: 'Wayfair',
@@ -121,7 +121,7 @@ const products = [
    },
    {
       name: 'Porcellain Table Vase Jar Set',
-      image: '/imgs/table-vase-set.jpeg',
+      image: '/images/table-vase-set.jpeg',
       description:
          'Featuring a ceramic vessel and wire frame stand, this decorative vessel set can be configured to your liking.',
       brand: 'Wayfair',
@@ -133,7 +133,7 @@ const products = [
    },
    {
       name: '20" Blue Cotton Pouf Ottoman',
-      image: '/imgs/blue-pouf-ottoman.jpeg',
+      image: '/images/blue-pouf-ottoman.jpeg',
       description:
          'Elevate any room in your home with this classic Moroccan ottoman. Made from 100% cotton, this material is easy to care for and does not sacrifice any style. Perfect for décor or functional use.',
       brand: 'Wayfair',

@@ -93,6 +93,9 @@ const CartScreen = ({ match, location, history }) => {
                   ))}
                </ListGroup>
             )}
+            <Link className='btn btn-lg mt-4 p-0' to='/'>
+               <i className='fas fa-arrow-left'></i> Keep Shopping
+            </Link>
          </Col>
          <Col md={4}>
             <Card className='mt-3'>
