@@ -10,17 +10,24 @@ const PlaceOrderScreen = ({ history }) => {
    const dispatch = useDispatch()
    const cart = useSelector(state => state.cart)
 
-   cart.itemsPrice = cart.cartItems.reduce(
-      (acc, item) => acc + item.price * item.qty,
-      0
+   const fixDecimals = num => {
+      return (Math.round(num * 100) / 100).toFixed(2)
+   }
+
+   // Price Calculations
+   cart.itemsPrice = fixDecimals(
+      cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
    )
 
-   cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 10
-   cart.taxPrice = Number((cart.itemsPrice * 0.13).toFixed(2))
+   cart.shippingPrice = fixDecimals(Number(cart.itemsPrice > 100 ? 0 : 10))
 
-   cart.totalPrice = Number(
-      (cart.itemsPrice + cart.shippingPrice + cart.taxPrice).toFixed(2)
-   )
+   cart.taxPrice = fixDecimals(Number((cart.itemsPrice * 0.13).toFixed(2)))
+
+   cart.totalPrice = (
+      Number(cart.itemsPrice) +
+      Number(cart.shippingPrice) +
+      Number(cart.taxPrice)
+   ).toFixed(2)
 
    const orderCreate = useSelector(state => state.orderCreate)
    const { order, success, error } = orderCreate
@@ -92,7 +99,7 @@ const PlaceOrderScreen = ({ history }) => {
                                     </Col>
                                     <Col md={4}>
                                        {item.qty} x ${item.price} = $
-                                       {item.qty * item.price}
+                                       {(item.qty * item.price).toFixed(2)}
                                     </Col>
                                  </Row>
                               </ListGroup.Item>

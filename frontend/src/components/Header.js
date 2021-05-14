@@ -24,8 +24,9 @@ const Header = () => {
                <LinkContainer to='/'>
                   <Navbar.Brand>
                      <img
-                        className='mr-3'
-                        src='../imgs/saturn.png'
+                        className='mr-2'
+                        src='../images/saturn.png'
+                        alt='Saturn Logo'
                         width='25px'
                         height='25px'
                      ></img>

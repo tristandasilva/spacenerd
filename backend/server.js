@@ -15,10 +15,6 @@ const app = express()
 // Allows us to accept json data in body of requests
 app.use(express.json())
 
-app.get('/', (req, res) => {
-   res.send('You rock')
-})
-
 app.use('/api/products', productRoutes)
 app.use('/api/users', userRoutes)
 app.use('/api/orders', orderRoutes)
