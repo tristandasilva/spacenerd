@@ -14,7 +14,7 @@ const Header = () => {
 
    const logoutHandler = e => {
       e.preventDefault()
-      history.push('/login')
+      history.push('/')
       dispatch(logout())
    }
    return (

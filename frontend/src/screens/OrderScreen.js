@@ -116,7 +116,6 @@ const OrderScreen = ({ match }) => {
                   </ListGroup.Item>
                   <ListGroup.Item>
                      <h2>Order Items: </h2>
-                     <strong>Method: </strong>
                      {order.orderItems.length === 0 ? (
                         <Message>Your order is empty</Message>
                      ) : (
@@ -138,7 +137,7 @@ const OrderScreen = ({ match }) => {
                                     </Col>
                                     <Col md={4}>
                                        {item.qty} x ${item.price} = $
-                                       {item.qty * item.price}
+                                       {(item.qty * item.price).toFixed(2)}
                                     </Col>
                                  </Row>
                               </ListGroup.Item>
